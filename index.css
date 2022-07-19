@@ -1,0 +1,135 @@
+@font-face {
+    font-family: 'cursed_timer_ulilregular';
+    src: url('cursedtimerulil-aznm-webfont.woff2') format('woff2'),
+         url('cursedtimerulil-aznm-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+ body { 
+    /* Flexbox was giving us issues when using align content, although justify content did work, for some reason 
+    this one didnt. We decided to fix it just using margin top and it seems to be responsive just as well  */
+    height:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color:#065F46;
+}
+.mainbody{
+    font-size: 4vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Min/max heigh/width only works when there is an established width and height */
+    width:100%;
+    height:100%;
+    /* We chose to use min-width and min-height to give the main container a minimum heigh and width it should be at all times regardless of the size of the browser
+    As for the max width and height, it controls the maximum size the container can be when rezising the page.It's more dynamic th */
+    margin-top:3vh;
+    min-width:90vw;
+    max-width: 100vw;
+    min-height: 90vh;
+    max-height: fit-content;
+    background-color:#059669;
+    margin-left:1%;
+    margin-right:1%;
+}
+h1{
+    font-size: 6vw;
+    margin: 2vmax;
+}
+/* These are media quarries, we needed these because the wrap function on its own wasnt working well, so we made it so it wrapped at a certain point */
+@media screen and (max-width:1085px) {
+    .mainbody {flex-wrap: wrap;
+        width:90vw;
+        min-width: 6vmax;
+        
+    }
+    h1{
+        font-size: 2.3em;
+    }
+    html{
+        font-size: 10px;
+    }
+    .numbers{
+        flex-wrap: wrap;
+        align-content: center;
+    }
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh 5vh 5vh;
+    width:100%;
+    min-width: 1em;
+    max-width: 20em;
+    height:100%;
+    min-height: 18em;
+    max-height: 19em;
+    background-color: #10B981;
+    font-family:'cursed_timer_ulilregular';
+    font-weight: normal;
+    font-style: normal;
+}
+.counter{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 5em;
+    font-family: 'cursed_timer_ulilregular';
+    color: #F94F6D;
+    border-radius: 5%;
+    height: 100vh;
+    width: 100%;
+    min-width: 5vw;
+    max-width: 20vw;
+    min-height: 5vh;
+    max-height: 33vh;
+    background:#000000
+}
+.numbers{
+    background-color: transparent;
+    color:black;
+    font-family: 'cursed_timer_ulilregular';
+    font-size: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+    height:fit-content;
+    width: fit-content;
+    padding-top: 8%;
+    padding:4%;
+    border-style:solid;
+    border-color: antiquewhite;
+    border-radius: 10%;
+    height:100vh;
+    width: 100vw;
+    min-height: 1/2vh;
+    max-height: 8vh;
+    min-width: 1/2vw;
+    max-width: 5vw;
+}
+
+.increment{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1vw;
+    height: 100vh;
+    width: 100vw;
+    min-height: 2vw;
+    max-height: 10vw;
+    min-width: 2vw;
+    max-width: 30vw;
+    margin-top:1vh;
+    /* border-style: solid; 
+    border-color:silver */
+}

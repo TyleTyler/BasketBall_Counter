@@ -1,0 +1,43 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <link rel = "stylesheet" href = "index.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/05e88a6554.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+ </head>
+ <body>
+    <!--Refer to image1.png for refrence to the boxes we decided to make and the breakdown of the structure-->
+    <!--This is the "mainbody" or the section that stores everything -->
+    <div class = "mainbody">
+        <!--This is the home section, it will store the home counter-->
+        <div class="container">
+        <h1> HOME</h1>
+        <div class="counter" id="homeCounter">0</div>
+            <!--This is the increment section, it will store the increment buttons-->
+            <div class ="increment">
+               <button type="button" class="numbers homeInc" onclick="add1()"> +1</button>
+               <button type="button" class="numbers homeInc" onclick="add2()"> +2 </button>
+               <button type="button" class="numbers homeInc" onclick="add3()"> +3 </button>
+               <button onclick="homeReset()"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+            </div>
+            
+        </div>
+        <!--This is the guest section, it will store the guest counter-->
+        <div class="container">
+           <h1> GUEST </h1>
+            <div class="counter" id = "guestCounter">0</div>
+            <div class ="increment">
+               <button type="button" class="numbers guessInc" onclick="addguest1()"> +1</button>
+               <button type="button" class="numbers guessInc" onclick= "addguest2()"> +2 </button>
+               <button type="button" class="numbers guessInc" onclick="addguest3()"> +3</button> 
+               <button onclick="guestReset()"><i class="fa-solid fa-arrow-rotate-right"></i></button>
+        </div>
+    </div>
+ </body>
+ <script src="index.js"></script> 
+ </html>
+
